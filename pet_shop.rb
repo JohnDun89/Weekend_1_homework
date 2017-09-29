@@ -47,5 +47,26 @@ for pet in pet_shop_name[:pets]
   end
 end
   return pets
+end
 
+def find_pet_by_name(pet_shop_name, pet_name)
+  for pet in pet_shop_name[:pets]
+   if pet[:name] == pet_name
+     actual_pet = pet
+   end
+ end
+ return actual_pet
+end
+
+def remove_pet_by_name(pet_shop_name, pet_name)
+
+  for pet in pet_shop_name[:pets]
+   if pet[:name] == pet_name
+     actual_pet = pet
+     pet_shop_name[:pets].delete(pet)
+  end
+ end
+end
+
+def add_pet_to_stock(pet_shop_name, pet_to_add)
 end
