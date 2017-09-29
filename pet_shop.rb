@@ -59,7 +59,6 @@ def find_pet_by_name(pet_shop_name, pet_name)
 end
 
 def remove_pet_by_name(pet_shop_name, pet_name)
-
   for pet in pet_shop_name[:pets]
    if pet[:name] == pet_name
      actual_pet = pet
@@ -74,4 +73,8 @@ end
 
 def customer_pet_count(customer)
   customer[:pets].count
+end
+
+def add_pet_to_customer (customer, new_pet)
+customer[:pets] << new_pet
 end
